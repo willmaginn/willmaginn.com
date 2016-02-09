@@ -1,0 +1,222 @@
+/*
+ * Main CSS
+ * Updated: 15-12-13
+ * Version: 1.1
+ */
+
+@import "reset.scss";	/* Reset style      */
+@import "globals.scss"; /* Global settings 	*/
+@import "helpers.scss"; /* Mix-ins 			*/
+@import "plugins.scss"; /* CSS For Plugins 	*/
+@import "grid.scss"; 	/* Grid 			*/
+
+html {
+
+	body {
+		background-color: $background-colour;
+		color: $text-colour;
+		font-size: 72.5%;
+		@include font();
+
+		.page-wrap {
+			position: absolute;
+			top: 0;
+			width: 100%;
+
+			.header { 
+				float: left;
+				margin: 50px 0 0 70px;
+				position: relative;
+				/*text-align: center;*/
+				top: 0;
+				z-index: 10;
+
+				header {
+					margin: 0 auto;
+
+					nav {
+						/*background-color: #FFF;*/
+						/*opacity: 0.5;*/
+						padding: 30px 0 0 0;
+
+						ul {
+							margin: 0 0 0 40px;
+							li {
+								display: block;
+								margin: 0 10px 5px 10px;
+
+								a {
+									color: #FFF;
+									font-size: 12px;
+									font-weight: bold;
+								}
+
+								a:hover {
+									color: #00B8BE;
+									text-decoration: none;
+								}
+
+								a.active {
+									color: #00B8BE;
+								}
+							}
+						}
+					}
+				}
+
+			}
+
+			.container {
+				color: #FFF;
+				float: left;
+				left: 40px;
+				position: relative;
+				top: 170px;
+
+				article {
+					@include font-bold();
+					@include transparent(0, 184, 190, 0.7);
+					/*background-color: #00B8BE;*/
+					border-top: 0 !important;
+					font-size: 22px;
+					line-height: 33px;
+					/*max-height: 273px;*/
+					max-width: 643px;
+					overflow: hidden;
+					padding: 30px 38px 30px 38px;
+					z-index: 10;
+
+					.close-text {
+						background: url('../images/close-button.png') no-repeat;
+						display: block;
+						height: 21px;
+						margin: 20px 0 0 0;
+						text-indent: -9999px;
+						width: 21px;
+					}
+					.close-text:hover {
+						background-position: 0 -21px;
+					}
+				}
+
+				/* .google-map {
+					float: right;
+				}*/
+				.google-map {
+				    position: relative;
+				    padding-bottom: 300px;
+				    padding-top: 30px;
+				    height: 0;
+				    overflow: hidden;
+				}
+
+				.google-map iframe,   
+				.google-map object,  
+				.google-map embed {
+				    position: absolute;
+				    top: 0;
+				    left: 0;
+				    width: 100%;
+				}
+
+			}
+
+			.footer {
+
+				/*background-color: #000;*/
+				bottom: 0;
+				position: relative;
+				width: 100%;
+				z-index: 10;
+				
+				footer {
+					margin: 0 auto;
+					color: #FFF;
+					padding: 10px;
+					overflow: hidden;
+
+					.credits {
+						padding: 10px 0;
+						
+						a {
+							color: #000;
+						}
+					}
+				}
+
+			}
+
+		} /* .page-wrap */
+
+	} /* body */
+
+} /* html */
+
+@media all and (max-width: 320px) and (min-width: 0px) {
+	
+	html {
+		body {
+			.page-wrap {
+				.header {
+					margin: 20px 0 0 0;
+					text-align: center;
+					width: 100%;
+
+					header {
+
+					}
+				}
+				.container {
+					clear: both;
+					left: 0;
+					margin: 0 40px;
+					top: 0;
+
+					article {
+						font-size: 18px;
+						max-width: none;
+						width: 100%;
+					}
+				}
+				.footer {
+					footer {
+
+					}
+				}
+			}
+		}
+	}
+
+}
+/*
+@media all and (max-width: 1024px) and (min-width: 769px) {
+	
+	html {
+		body {
+			.page-wrap {
+				.header {
+
+					header {
+					}
+				}
+				.container {
+
+					article {
+						max-width: none;
+
+					}
+				}
+				.footer {
+					footer {
+
+					}
+				}
+			}
+		}
+	}
+
+}*/
+
+@media all and (min-width: 1201px) {
+
+}

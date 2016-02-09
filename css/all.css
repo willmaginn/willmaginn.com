@@ -1,0 +1,602 @@
+/*=* Included Files *=*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Reset style      */
+/* Global Variables */
+/* Colours */
+/* Global settings 	*/
+/* Mix ins */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.clear-left {
+  clear: left;
+}
+.clear-right {
+  clear: right;
+}
+.hidden {
+  display: none;
+}
+html body a {
+  color: #999999;
+  text-decoration: solid;
+}
+html body a:hover {
+  background: #000;
+  color: #FFF;
+  text-decoration: none;
+}
+html body .links a {
+  color: #FFF;
+}
+html body .links a:hover {
+  background: #FFF;
+  color: #000;
+  text-decoration: none;
+}
+html body table {
+  border: 1px dotted #000;
+}
+html body table th {
+  border-top: 1px dotted #000;
+  border-right: 1px dotted #000;
+  border-bottom: 1px solid #000;
+  border-left: 1px dotted #000;
+  font-weight: bold;
+}
+html body table td {
+  border: 1px dotted #000;
+  text-align: center;
+  width: 140px;
+}
+html body h1,
+html body h2,
+html body h3,
+html body h4,
+html body h5,
+html body h6 {
+  clear: both;
+  padding: 6px 0;
+}
+html body h1 {
+  font-size: 3.0em;
+}
+html body h2 {
+  font-size: 2.0em;
+}
+html body h3 {
+  font-size: 1.7em;
+}
+html body h4 {
+  font-size: 1.4em;
+}
+html body h5 {
+  font-size: 1.2em;
+}
+html body h6 {
+  font-size: 1.0em;
+}
+html body p {
+  font-size: 1.0em;
+}
+html body ul,
+html body ol,
+html body dl {
+  clear: both;
+}
+html body ul li,
+html body ol li,
+html body dl li,
+html body ul dt,
+html body ol dt,
+html body dl dt,
+html body ul dd,
+html body ol dd,
+html body dl dd {
+  padding: 5px 0 0 20px;
+}
+html body ul.vertical li {
+  padding: 0 10px 10px 0;
+}
+html body ul.horizontal {
+  display: block;
+}
+html body ul.horizontal li {
+  float: left;
+  padding: 0 10px 10px 0;
+}
+html body .status-bar {
+  background-color: #999;
+  border-bottom: 1px dotted #000;
+  height: 30px;
+  font-size: 1.2em;
+  left: 0px;
+  padding: 6px 0 0 0;
+  position: fixed;
+  opacity: 0.8;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+}
+@media all and (max-width: 480px) and (min-width: 0px) {
+  html body {
+    /*background-color: green !important;			*/
+  
+  }
+  html header,
+  html .container,
+  html footer {
+    width: 320px !important;
+  }
+  html .header-container {
+    min-height: 40px !important;
+  }
+  html .header-container header .text {
+    padding: 2px 0 0 0 !important;
+    position: absolute;
+    left: 50px;
+    top: 0px;
+    font-size: 0.8em;
+  }
+  html .header-container header img {
+    height: 30px !important;
+    width: 30px !important;
+    left: 10px !important;
+    top: 5px !important;
+  }
+  html .container {
+    padding: 50px 10px !important;
+  }
+  html .container img {
+    height: 100px;
+    width: 100px;
+  }
+  html footer .text {
+    display: none;
+  }
+  html footer .links {
+    font-size: 0.8em;
+    width: 100% !important;
+  }
+  html footer .links ul {
+    display: block;
+  }
+  html footer .links ul li {
+    float: left;
+    padding: 0 10px 2px 0 !important;
+  }
+  html footer .credits {
+    display: none;
+  }
+  html .mobile {
+    display: block !important;
+  }
+}
+@media all and (max-width: 768px) and (min-width: 481px) {
+  html body {
+    /*background-color: brown !important;*/
+  
+  }
+  html header,
+  html .container,
+  html footer {
+    width: 440px !important;
+  }
+  html .tablet {
+    display: block !important;
+  }
+}
+@media all and (min-width: 769px) {
+  html body {
+    /*background-color: yellow !important;*/
+  
+  }
+  html header,
+  html .container,
+  html footer {
+    width: 680px !important;
+  }
+  html .desktop {
+    display: block !important;
+  }
+}
+/* Mix-ins 			*/
+/* 
+	LEVEL ONE
+*/
+ul.dropdown {
+  position: relative;
+}
+ul.dropdown li {
+  font-weight: bold;
+  float: left;
+  zoom: 1;
+  background: #000;
+  padding: 0 10px;
+  text-align: center;
+  border-right: 1px solid #333;
+}
+ul.dropdown a:hover {
+  color: #000;
+}
+ul.dropdown a:active {
+  color: #ffa500;
+}
+ul.dropdown li a {
+  display: block;
+  padding: 1px 0;
+  color: #FFF;
+}
+ul.dropdown li:last-child a {
+  border-right: none;
+}
+/* Doesn't work in IE */
+ul.dropdown li.hover,
+ul.dropdown li:hover {
+  background: #CCC;
+  color: black;
+  position: relative;
+}
+ul.dropdown li.hover a {
+  color: black;
+}
+/* 
+	LEVEL TWO
+*/
+ul.dropdown ul {
+  width: 220px;
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+ul.dropdown ul li {
+  font-weight: normal;
+  background: #f6f6f6;
+  color: #000;
+  border-bottom: 1px solid #ccc;
+  float: none;
+  text-align: left;
+  border-right: 0;
+}
+/* IE 6 & 7 Needs Inline Block */
+ul.dropdown ul li a {
+  border-right: none;
+  width: 100%;
+  display: inline-block;
+}
+/* 
+	LEVEL THREE
+*/
+ul.dropdown ul ul {
+  left: 100%;
+  top: 0;
+}
+ul.dropdown li:hover > ul {
+  visibility: visible;
+}
+.ie ul.dropdown ul li {
+  display: inline;
+  width: 100%;
+}
+/* CSS For Plugins 	*/
+/* SPANS */
+.span1,
+.span2,
+.span3,
+.span4,
+.span5,
+.span6,
+.span7,
+.span8,
+.span9,
+.span10,
+.span11,
+.span12,
+aside {
+  border-left-width: 0px;
+  padding: 0 10px;
+  border: 0px solid rgba(0, 0, 0, 0);
+  float: left;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-background-clip: padding-box !important;
+  -webkit-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+}
+.span1 {
+  width: 8.33333333333%;
+}
+.span2 {
+  width: 16.6666666667%;
+}
+.span3,
+aside {
+  width: 25.0%;
+}
+.span4 {
+  width: 33.3333333333%;
+}
+.span5 {
+  width: 41.6666666667%;
+}
+.span6 {
+  width: 50.0%;
+}
+.span7 {
+  width: 58.3333333333%;
+}
+.span8 {
+  width: 66.6666666667%;
+}
+.span9 {
+  width: 75.0%;
+}
+.span10 {
+  width: 83.3333333333%;
+}
+.span11 {
+  width: 91.6666666667%;
+}
+.span12 {
+  margin-left: 0;
+  width: 100%;
+}
+/* Grid 			*/
+/*=* Start of CSS *=*/
+html body {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html body .header-container {
+  background-color: #000;
+  position: fixed;
+  min-height: 80px;
+  width: 100%;
+}
+html body .header-container header {
+  margin: 0 auto;
+  width: 800px;
+}
+html body .header-container header img {
+  border: none;
+  height: 72px;
+  left: 48%;
+  position: absolute;
+  top: 5px;
+  width: 72px;
+}
+html body .header-container header h1 {
+  text-align: center;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+html body .header-container header h1 a:hover img {
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 500ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 500ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(1800deg);
+}
+html body .header-container header .text {
+  color: #FFF;
+  padding: 14px 0 0 0;
+}
+html body .header-container header .text p {
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+html body .header-container header nav {
+  height: 18px;
+}
+html body .container {
+  line-height: 1.2em;
+  margin: 0 auto;
+  padding: 140px 0;
+  overflow: hidden;
+  width: 800px;
+}
+html body .container p {
+  padding: 10px 0;
+  text-align: center;
+}
+html body .container img {
+  /*float: left;*/
+  /*padding: 0 15px 0 0;*/
+  margin: 0 auto;
+  display: block;
+}
+html body .footer-container {
+  background-color: #000;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+html body .footer-container footer {
+  margin: 0 auto;
+  color: #ffffff;
+  padding: 10px 0;
+  overflow: hidden;
+  width: 800px;
+}
+html body .footer-container footer div {
+  padding: 0;
+}
+html body .footer-container footer p {
+  line-height: 1.2em;
+}
+html body .footer-container footer ul li {
+  padding: 2px 0;
+}
+html body .footer-container footer .credits {
+  font-size: 0.8em;
+  margin: 5px 0;
+}

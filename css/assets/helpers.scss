@@ -1,0 +1,191 @@
+/*
+ * Mix-ins
+ * Updated: 17-11-13
+ * Version: 1.0
+ */
+
+* {	
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.clear {
+	clear: both;
+}
+
+.clear-left {
+	clear: left;
+}
+
+.clear-right {
+	clear: right;
+}
+
+.hidden {
+	display: none;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.grey {
+	color: #333 !important;
+}
+
+@mixin font() {
+	font-family: 'Gotham SSm A', 'Gotham SSm B'; font-weight: 400; font-style: normal;
+}
+
+@mixin font-bold() {
+	font-family: 'Gotham SSm A', 'Gotham SSm B'; font-weight: 700; font-style: normal;
+}
+
+@mixin hide-text() {
+	text-indent: -9999px;
+}
+
+@mixin  hide-text-alt() {
+	font-size:0;
+	display:block;
+	line-height:0
+}
+
+@mixin animate($speed: .5s all) {
+	-webkit-transition: $speed ease;
+	-moz-transition: $speed ease;
+	-o-transition: $speed ease;    
+	-ms-transition: $speed ease;
+	transition: $speed ease;
+}
+
+@mixin edge-shadow-left ($color:#000, $spread: 5px) {
+			behavior: url(PIE.htc);
+  -webkit-box-shadow: -6px 10px 12px 0px $color;
+	 -moz-box-shadow: -6px 10px 12px 0px $color;
+	      box-shadow: -6px 10px 12px 0px $color;
+}
+
+@mixin edge-shadow-bottom ($color:#000, $spread: 5px) {
+			behavior: url(PIE.htc);
+  -webkit-box-shadow: 0px -27px 45px 19px $color;
+	 -moz-box-shadow: 0px -27px 45px 19px $color;
+	      box-shadow: 0px -27px 45px 19px $color;
+}
+
+@mixin transparent ($red:0, $green:0, $blue:0, $opacity:0) {
+	/*-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	-moz-opacity: $opacity;
+	-khtml-opacity: $opacity;
+	opacity: $opacity;*/
+
+	/* 
+	   In instances where text is to be overlaid
+	   use the code below, other wise use above 
+	*/
+
+	background: rgb($red, $green, $blue); /* The Fallback */
+   	background: rgba($red, $green, $blue, $opacity); 
+}
+
+@mixin rounded ($top-left:5px, $top-right:5px, $bottom-right:5px, $bottom-left:5px) {
+	behavior: url(PIE.htc);
+	-moz-border-radius: $arguments;
+	-webkit-border-radius: $arguments;
+	border: $arguments;
+}
+
+html {
+
+	body {
+
+		a {
+			color: $link-colour;
+			text-decoration: $link-underline;
+		}
+
+		/*table {
+			border: 1px dotted #000;
+
+			th {
+				border-top: 1px dotted #000;
+				border-right: 1px dotted #000;	
+				border-bottom: 1px solid #000;	
+				border-left: 1px dotted #000;
+				font-weight: bold;
+			}
+			
+			td {
+				border: 1px dotted #000;
+				text-align: center;
+				width: 140px;	
+			}
+		}*/
+
+		h1, h2, h3, h4, h5, h6 {
+			clear: both;
+			padding: 6px 0;
+		}
+
+		h1 {
+			/* 36pt */
+			font-size: 3.024em; 
+		}
+
+		h2 {
+			/* 26pt */
+			font-size: 2.184em;
+		}
+
+		h3 {
+			/* 24pt */
+			font-size: 2.016em;
+		}
+
+		h4 {
+			/* 22pt */
+			font-size: 1.848em;
+		}
+
+		h5 {
+			/* 18pt */
+			font-size: 1.512em;
+		}
+
+		h6 {
+			/* 16pt */
+			font-size: 1.344em;
+		}
+
+		p {
+			/* 12pt */
+			font-size: 1.008em;
+		}
+	}
+}
+/*
+$media all and (max-width: 480px) and (min-width: 0px) {
+
+}
+
+$media all and (max-width: 768px) and (min-width: 481px) {
+
+}
+
+$media all and (max-width: 1200px) and (min-width: 769px) {
+
+}
+
+$media all and (min-width: 1201px) {
+
+}*/

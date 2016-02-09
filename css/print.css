@@ -1,0 +1,11 @@
+.header-container {
+	display: none !important;
+}
+
+.container {
+	padding: 10px 0 !important;
+}
+
+.footer-container {
+	position: relative !important;
+}
