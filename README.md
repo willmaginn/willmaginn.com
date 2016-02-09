@@ -2,6 +2,6 @@
 
 ## Setup
 
-``` $ npm install
+	$ npm install
 
-``` $ gulp watch
+	$ gulp watch
