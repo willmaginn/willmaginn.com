@@ -862,6 +862,7 @@ html body {
   border-bottom: 5px solid #000;
   border-top: 5px solid #000;
   color: #000;
+  font-family: "Courier New", Courier, monospace;
   /*height: 100%;*/
   /*position: absolute;*/
   /*width: 100%;*/
@@ -872,6 +873,8 @@ html body .page-wrap {
   margin: 10px auto 0 auto;
   max-width: 600px;
   padding: 10px 10px 0 10px; }
+html body .page-wrap a {
+  font-family: "Courier New", Courier, monospace; }
 html body .page-wrap h3 {
   font-size: 1.5em;
   font-variant: small-caps; }
@@ -879,7 +882,7 @@ html body .page-wrap h4 {
   font-size: 1.1em;
   font-variant: small-caps; }
 html body .page-wrap i {
-  font-style: italic; }
+  /*font-style: italic;*/ }
 html body .page-wrap header {
   margin: 0 0 10px 0;
   overflow: hidden; }

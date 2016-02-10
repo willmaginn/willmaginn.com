@@ -16,6 +16,7 @@ html {
 		border-bottom: 5px solid #000;
 		border-top: 5px solid #000;
 		color: $text-colour;
+		font-family: "Courier New", Courier, monospace;
 		/*height: 100%;*/
 		/*position: absolute;*/
 		/*width: 100%;*/
@@ -28,6 +29,10 @@ html {
 			max-width: 600px;
 			padding: 10px 10px 0 10px;
 
+			a {
+				font-family: "Courier New", Courier, monospace;
+			}
+
 			h3 {
 				font-size: 1.5em;
 				font-variant: small-caps;
@@ -39,7 +44,7 @@ html {
 			}
 
 			i {
-				font-style: italic;
+				/*font-style: italic;*/
 			}
 
 			header {
