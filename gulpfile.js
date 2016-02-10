@@ -13,7 +13,7 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('sass', function() {
-	return sass('css/style.scss', { style: 'minified' })
+	return sass('css/assets/all.scss', { style: 'minified' })
 	.pipe(gulp.dest('css/'))
 	.pipe(notify({ message: 'Styles task complete' }))
 	.pipe(livereload());
@@ -25,7 +25,7 @@ gulp.task('watch', function() {
   	livereload.listen();
 
   	// Watch .scss files
-  	gulp.watch('css/*.scss', ['sass']);
+  	gulp.watch('css/assets/*.scss', ['sass']);
 
   	// Watch .js files
   	// gulp.watch('js/*.js', ['sass']);

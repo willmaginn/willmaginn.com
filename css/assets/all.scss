@@ -7,146 +7,205 @@
 @import "reset.scss";	/* Reset style      */
 @import "globals.scss"; /* Global settings 	*/
 @import "helpers.scss"; /* Mix-ins 			*/
-@import "plugins.scss"; /* CSS For Plugins 	*/
 @import "grid.scss"; 	/* Grid 			*/
 
 html {
 
 	body {
 		background-color: $background-colour;
+		border-bottom: 5px solid #000;
+		border-top: 5px solid #000;
 		color: $text-colour;
-		font-size: 72.5%;
-		@include font();
+		/*height: 100%;*/
+		/*position: absolute;*/
+		/*width: 100%;*/
 
 		.page-wrap {
-			position: absolute;
-			top: 0;
-			width: 100%;
+			
+			font-size: 0.8em;
+			height: 100%;
+			margin: 10px auto 0 auto;
+			max-width: 600px;
+			padding: 10px 10px 0 10px;
 
-			.header { 
-				float: left;
-				margin: 50px 0 0 70px;
-				position: relative;
-				/*text-align: center;*/
-				top: 0;
-				z-index: 10;
-
-				header {
-					margin: 0 auto;
-
-					nav {
-						/*background-color: #FFF;*/
-						/*opacity: 0.5;*/
-						padding: 30px 0 0 0;
-
-						ul {
-							margin: 0 0 0 40px;
-							li {
-								display: block;
-								margin: 0 10px 5px 10px;
-
-								a {
-									color: #FFF;
-									font-size: 12px;
-									font-weight: bold;
-								}
-
-								a:hover {
-									color: #00B8BE;
-									text-decoration: none;
-								}
-
-								a.active {
-									color: #00B8BE;
-								}
-							}
-						}
-					}
-				}
-
+			h3 {
+				font-size: 1.5em;
+				font-variant: small-caps;
 			}
 
-			.container {
-				color: #FFF;
-				float: left;
-				left: 40px;
-				position: relative;
-				top: 170px;
+			h4 {
+				font-size: 1.1em;
+				font-variant: small-caps;
+			}
 
-				article {
-					@include font-bold();
-					@include transparent(0, 184, 190, 0.7);
-					/*background-color: #00B8BE;*/
-					border-top: 0 !important;
-					font-size: 22px;
-					line-height: 33px;
-					/*max-height: 273px;*/
-					max-width: 643px;
-					overflow: hidden;
-					padding: 30px 38px 30px 38px;
-					z-index: 10;
+			i {
+				font-style: italic;
+			}
 
-					.close-text {
-						background: url('../images/close-button.png') no-repeat;
-						display: block;
-						height: 21px;
-						margin: 20px 0 0 0;
-						text-indent: -9999px;
-						width: 21px;
-					}
-					.close-text:hover {
-						background-position: 0 -21px;
-					}
+			header {
+				margin: 0 0 10px 0;
+				overflow: hidden;
+
+				.logo {
+					background: #000;
+					border-radius: 48px;
+					display: inline-block;
+					float: left;
+					padding: 3px 3px 0px 3px;
+					vertical-align: middle;
 				}
-
-				/* .google-map {
+				.name {
 					float: right;
-				}*/
-				.google-map {
-				    position: relative;
-				    padding-bottom: 300px;
-				    padding-top: 30px;
-				    height: 0;
-				    overflow: hidden;
+					font-variant: small-caps;
+					margin: 18px 5px 0 0;
+
+					p {
+						text-align: right;
+					}
+
+
 				}
 
-				.google-map iframe,   
-				.google-map object,  
-				.google-map embed {
-				    position: absolute;
-				    top: 0;
-				    left: 0;
-				    width: 100%;
-				}
+				ul	{
+					clear: both;
+					text-align: right;
+					margin: 0 5px;
+					li {
+						display: inline-block;
+						text-align: right;
 
-			}
-
-			.footer {
-
-				/*background-color: #000;*/
-				bottom: 0;
-				position: relative;
-				width: 100%;
-				z-index: 10;
-				
-				footer {
-					margin: 0 auto;
-					color: #FFF;
-					padding: 10px;
-					overflow: hidden;
-
-					.credits {
-						padding: 10px 0;
-						
 						a {
 							color: #000;
+							padding: 0 0 0 1px;
+						}
+						a:hover {
+							border-bottom: 1px solid #ccc;
+							color: #ccc;
 						}
 					}
+				}
+			}
+
+			.content {
+				padding: 0 10px;
+
+				border-left: 45px solid #ededed;
+				border-right: 1px solid #ededed;
+				margin: 0 0 0 5px;
+
+				div > h3, > h3 {
+					border-bottom: 2px solid #000;
+				}				
+
+				p {
+					margin: 10px 0;
+					text-align: justify;
+					font-variant: small-caps;
+				}
+
+				.row {
+					/*margin: 0;*/
+				}
+
+				a.hire {
+					border-top: 2px dashed #ccc;
+					color: #000;
+					display: block;
+					text-align: center;
+					margin: 10px 0 0 0;
+					padding: 10px 0
+				}
+
+				a.hire:hover {
+					color: #ccc;
+					text-decoration: underline;
+				}
+
+				.row.skills ul {
+					li {
+						border-bottom: 1px solid #ccc;
+						display: inline-block;
+						font-size: 0.8em;
+						font-variant: small-caps;
+						margin: 0 4px 0 0;
+						padding: 4px 0px 1px 0;
+					}
+					li:nth-child(even) {
+						font-weight: bold;
+					}
+				}
+			}
+
+			.role {
+				padding-top: 10px;
+
+				.date, .title {
+					display: block;
+				}
+
+				.date {
+					color: #808080;
+					font-size: 0.7em;
+					font-variant: small-caps;
+				}
+
+				.title {
+					border-bottom: 1px solid #ccc;
+					padding: 0 0 2px 0;
+					margin: 0 0 4px 0;
+					font-variant: small-caps;
+				}
+				ul {
+					/*border-left: 1px solid #ccc;*/
+					padding: 0 0 0 5px;
+
+					li {
+						color: #808080;
+						font-size: 0.8em;
+						list-style-type: square;
+						padding: 1px 2px;
+					}
+				}
+			}
+
+			.education {
+				margin: 10px 0;
+				h4 {
+					margin: 0;
+					padding: 0;
+				}
+				.details {
+					p {
+						color: #808080;
+						display: inline-block;
+						font-size: 0.7em;
+						margin: 4px 0;
+					}
+					p:nth-child(even) {
+						font-size: 0.9em;
+						font-style: italic;
+						font-variant: small-caps;
+					}
+				}
+			}
+
+			footer {
+				border-top: 1px solid #ededed;
+				text-align: right;
+				padding: 5px 0;
+
+				p {
+					padding: 0;
+					margin: 0;
 				}
 
 			}
 
 		} /* .page-wrap */
+
+		.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, .col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, .col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, .col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, .col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, .col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, .col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, .col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, .col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, .col-sm-12, .col-md-12, .col-lg-12 {
+			/*padding: 0;*/
+		}
 
 	} /* body */
 
@@ -188,34 +247,6 @@ html {
 	}
 
 }
-/*
-@media all and (max-width: 1024px) and (min-width: 769px) {
-	
-	html {
-		body {
-			.page-wrap {
-				.header {
-
-					header {
-					}
-				}
-				.container {
-
-					article {
-						max-width: none;
-
-					}
-				}
-				.footer {
-					footer {
-
-					}
-				}
-			}
-		}
-	}
-
-}*/
 
 @media all and (min-width: 1201px) {
 

@@ -1,10 +1,13 @@
 {
-  "name": "Will Maginn Freelance Website",
+  "name": "willmaginn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "gulp": "^3.9.1"
+    "gulp": "^3.9.1",
+    "gulp-ruby-sass": "latest",
+    "gulp-livereload": "latest",
+    "gulp-notify": "latest"
   },
   "devDependencies": {},
   "scripts": {
