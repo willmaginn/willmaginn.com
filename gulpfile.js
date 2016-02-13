@@ -15,7 +15,7 @@ gulp.task('clean', function(cb) {
 gulp.task('sass', function() {
 	return sass('css/assets/all.scss', { style: 'minified' })
 	.pipe(gulp.dest('css/'))
-	.pipe(notify({ message: 'Styles task complete' }))
+	// .pipe(notify({ message: 'Styles task complete' }))
 	.pipe(livereload());
 });
 

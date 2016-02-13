@@ -26,7 +26,7 @@ html {
 			font-size: 0.8em;
 			height: 100%;
 			margin: 10px auto 0 auto;
-			max-width: 600px;
+			max-width: 768px;
 			padding: 10px 10px 0 10px;
 
 			a {
@@ -34,12 +34,12 @@ html {
 			}
 
 			h3 {
-				font-size: 1.5em;
+				font-size: 1.8em;
 				font-variant: small-caps;
 			}
 
 			h4 {
-				font-size: 1.1em;
+				font-size: 1.4em;
 				font-variant: small-caps;
 			}
 
@@ -130,7 +130,7 @@ html {
 					li {
 						border-bottom: 1px solid #ccc;
 						display: inline-block;
-						font-size: 0.8em;
+						font-size: 1.0em;
 						font-variant: small-caps;
 						margin: 0 4px 0 0;
 						padding: 4px 0px 1px 0;
@@ -150,7 +150,7 @@ html {
 
 				.date {
 					color: #808080;
-					font-size: 0.7em;
+					font-size: 0.9em;
 					font-variant: small-caps;
 				}
 
@@ -166,7 +166,7 @@ html {
 
 					li {
 						color: #808080;
-						font-size: 0.8em;
+						font-size: 0.9em;
 						list-style-type: square;
 						padding: 1px 2px;
 					}
@@ -194,6 +194,45 @@ html {
 				}
 			}
 
+			.work {
+				.detail {
+
+					a {		
+
+						img {
+							@include rounded(10px);
+							border: 2px dashed #ccc;
+							max-width: 200px;
+						}
+						span {
+							@include rounded(5px);
+							background: #fff;
+							border: 1px solid #ccc;
+							font-size: 1.2em;
+							padding: 5px;
+							position: absolute;
+							top: 10px;
+							margin: 0 10px;
+							max-width: 180px;
+						}
+					}					
+				}
+				ul.points {
+					li {
+						color: #000;
+						display: inline-block;
+						font-size: 0.85em;
+						padding: 2px 0px;
+						margin: 5px 0px;
+						span {
+							@include rounded(5px);
+							background: #ccc;
+							padding: 3px 5px;
+						}
+					}
+				}
+			}
+
 			footer {
 				border-top: 1px solid #ededed;
 				text-align: right;
@@ -216,7 +255,7 @@ html {
 
 } /* html */
 
-@media all and (max-width: 320px) and (min-width: 0px) {
+/*@media all and (max-width: 320px) and (min-width: 0px) {
 	
 	html {
 		body {
@@ -255,4 +294,4 @@ html {
 
 @media all and (min-width: 1201px) {
 
-}
+}*/

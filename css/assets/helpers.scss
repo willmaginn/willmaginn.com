@@ -98,11 +98,11 @@
    	background: rgba($red, $green, $blue, $opacity); 
 }
 
-@mixin rounded ($top-left:5px, $top-right:5px, $bottom-right:5px, $bottom-left:5px) {
+@mixin rounded ($arguments) {
 	behavior: url(PIE.htc);
 	-moz-border-radius: $arguments;
 	-webkit-border-radius: $arguments;
-	border: $arguments;
+	border-radius: $arguments;
 }
 
 html {
@@ -169,7 +169,7 @@ html {
 
 		p {
 			/* 12pt */
-			font-size: 1.008em;
+			font-size: 1.2em;
 		}
 	}
 }
